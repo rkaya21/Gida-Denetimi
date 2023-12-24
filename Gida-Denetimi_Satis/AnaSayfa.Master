@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CheckNutrition</title>
+    <link rel="stylesheet" type="text/css" href="MasterPage/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <!-- İçerik sayfasına özel head içeriği buraya gelebilir -->
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        body {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .auto-style2 {
+            height: 31px;
+        }
+
+        .auto-style3 {
+            height: 760px;
+        }
+
+        .auto-style4 {
+            left: 0px;
+            top: 0px;
+            width: 338px;
+        }
+
+        /* Yeni stil eklenen kısım */
+        .social-icons {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .social-icons a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #fff; /* İkon rengi */
+            font-size: 20px;
+        }
+
+        .auto-style13 {
+            margin: 0 auto 0 1586px;
+            display: block;
+        }
+
+        /* Yeni stil eklenen kısım */
+        .logo-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Yeni eklenen logo-container div -->
+        <div class="logo-container">
+            <asp:Image ID="Image3" runat="server" CssClass="auto-style13" Height="321px" ImageUrl="~/img/logo.png" Width="355px" />
+        </div>
+
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    CheckNutrition
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links" style="height: 49px">
+                <ul class="auto-style4">
+                    <li><a href="AnaSayfa.aspx" target="_blank">Ana Sayfa</a></li>
+                    <li><a href="Urunler.aspx" target="_blank">Ürünler</a></li>
+                    <li><a href="Barkodlama.aspx" target="_blank">Barkod</a></li>
+                    <li><a href="Cikis.Aspx">Çıkış</a></li>
+                </ul>
+            </div>
+
+            <section class="auto-style3">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+        </div>
+
+        <footer class="auto-style2">
+            2023 CheckNutrition.Tüm Hakları Saklıdır.
+        </footer>
+    </form>
+</body>
+</html>
